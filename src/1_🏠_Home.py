@@ -61,9 +61,9 @@ st.sidebar.markdown(sidebar_title, unsafe_allow_html=True)
 
 st.sidebar.image(hline)  # Add horizontal line
 st.sidebar.header(":blue[RAG Parameters]")
-host = st.sidebar.text_input("#### :blue[Opensearch Endpoint]", value='ltr-vector.awsbuddy.com')
+host = st.sidebar.text_input("#### :blue[Opensearch Endpoint]", value='search-cgo-sopi-gqhicljdfidyebvdxajvu46isq.aos.ap-northeast-2.on.aws')
 model_id = st.sidebar.text_input(
-    "#### :blue[Opensearch Embedding Model Id]", value='a5i40JEBhgMvJArLTW0o')
+    "#### :blue[Opensearch Embedding Model Id]", value='YSnimZMBTvfIY9PLKz-8')
 
 st.sidebar.image(hline) ###### Add horizontal line
 params = select_models(Page_name) ##### Call Model Selection routine
@@ -72,8 +72,8 @@ st.sidebar.image(hline) ###### Add horizontal line
 
 #### If input mode has been chosen and link/doc provided, convert the input to text ####
 # if uploaded is not None and uploaded !="":
-db = OpenSearchVectorClient(host='ltr-vector.awsbuddy.com',
-                            region='us-east-1', model_id=model_id, service='es')
+db = OpenSearchVectorClient(host='search-cgo-sopi-gqhicljdfidyebvdxajvu46isq.aos.ap-northeast-2.on.aws',
+                            region='ap-northest-2', model_id=model_id, service='es')
 #### Splitting app into tabs ####
 tab1, tab2=st.tabs(["|__QnA__ 🔍|","|__About Chatbot__ 🎭|"])
 
