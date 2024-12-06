@@ -125,7 +125,7 @@ class OpenSearchVectorClient:
             vector_dimension: Dimension of the embedding vectors
         """
         # Initialize OpenSearch client
-        credentials = boto3.Session(region_name='us-wes').get_credentials()
+        credentials = boto3.Session(region_name='ap-northeast-2').get_credentials()
         auth = AWSV4SignerAuth(credentials, region, service)
         self.model_id = model_id
         self.client = OpenSearch(
