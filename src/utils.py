@@ -17,7 +17,7 @@ region_name='us-west-2'
 
 application_metadata = {
     'models-llm':[
-        {'name': 'Claude-3.5-Sonnet-v2','endpoint': "anthropic.claude-3-5-sonnet-20241022-v2:0"},
+        {'name': 'Claude-3.5-Sonnet-v2','endpoint': "anthropic.claude-3-5-sonnet-20240620-v1:0"},
         {'name': 'Claude-3.5-Haiku','endpoint': "anthropic.claude-3-5-haiku-20241022-v1:0"},
         {'name':'Claude3-haiku', 'endpoint': "anthropic.claude-3-haiku-20240307-v1:0"}
         ],
