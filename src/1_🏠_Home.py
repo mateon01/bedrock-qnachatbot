@@ -73,7 +73,7 @@ st.sidebar.image(hline) ###### Add horizontal line
 #### If input mode has been chosen and link/doc provided, convert the input to text ####
 # if uploaded is not None and uploaded !="":
 db = OpenSearchVectorClient(host='search-cgo-sopi-gqhicljdfidyebvdxajvu46isq.aos.ap-northeast-2.on.aws',
-                            region='ap-northest-2', model_id=model_id, service='es')
+                            region='ap-northeast-2', model_id=model_id, service='es')
 #### Splitting app into tabs ####
 tab1, tab2=st.tabs(["|__QnA__ 🔍|","|__About Chatbot__ 🎭|"])
 
