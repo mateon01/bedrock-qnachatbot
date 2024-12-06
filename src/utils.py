@@ -12,7 +12,7 @@ import json
 
 bucket='<S3_Bucket_Name>'
 prefix='gen-ai-qa'
-region_name='us-west-2'
+region_name='ap-northeast-2'
 
 
 application_metadata = {
