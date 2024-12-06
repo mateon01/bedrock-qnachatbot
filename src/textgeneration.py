@@ -129,7 +129,7 @@ def bedrock_llm_call(params, qa_prompt=""):
         # input_token = claude.count_tokens(prompt)
         response = bedrock.invoke_model(
             body=prompt,
-            modelId="anthropic.claude-3-5-sonnet-20241022-v2:0",
+            modelId="anthropic.claude-3-5-sonnet-20240620-v1:0",
             accept="application/json",
             contentType="application/json"
         )
@@ -560,7 +560,7 @@ def summarizer(prompt_data,params,initial_token_count):
             # input_token = claude.count_tokens(prompt)
             response = bedrock.invoke_model(
                 body=prompt,
-                modelId="anthropic.claude-3-5-sonnet-20241022-v2:0",
+                modelId="anthropic.claude-3-5-sonnet-20240620-v1:0",
                 accept="application/json",
                 contentType="application/json"
             )
