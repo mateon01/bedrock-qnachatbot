@@ -85,15 +85,21 @@ def render_chat():
 ### to the session state variables pastinp and pastresp
 
 
-def chatbot(query, info,response):
-
+def chatbot(query, info, response):
     message(query, is_user=True)
     message(response)
-    if info[0]['_source']['table_md'] != '':
-        st.markdown(info[0]['_source']['table_md'])
-    if info[0]['_source']['image_base64'] != '':
-        image = new_img(info[0]['_source']['image_base64'])
-        if image:
-            st.image(image)
+
+    if info and isinstance(info, list) and len(info) > 0:  # info가 비어 있지 않은 경우 확인
+        source = info[0].get('_source', {})
+
+        if source.get('table_md', ''):
+            st.markdown(source['table_md'])
+
+        if source.get('image_base64', ''):
+            image = new_img(source['image_base64'])
+            if image:
+                st.image(image)
+    else:
+        message("No information available.")
 
     render_chat()
