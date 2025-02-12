@@ -195,12 +195,27 @@ class OpenSearchVectorClient:
                             }
                         },
                         {
-                            "neural": {
-                                "contextual_embedding": {
-                                    "query_text": query_text,
-                                    "model_id": self.model_id,
-                                    "k": k
-                                }
+                            "bool": {
+                                "should": [
+                                    {
+                                        "neural": {
+                                            "contextual_embedding": {
+                                                "query_text": query_text,
+                                                "model_id": self.model_id,
+                                                "k": k
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "neural": {
+                                            "body_chunk_embedding": {
+                                                "query_text": query_text,
+                                                "model_id": self.model_id,
+                                                "k": k
+                                            }
+                                        }
+                                    }
+                                ]
                             }
                         }
                     ]
